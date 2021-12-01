@@ -1,0 +1,47 @@
+.row.side {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+
+.nav-item {
+    margin-top: 10px;
+}
+
+.nav-link:hover {
+    background: white;
+}
+
+.position-sticky {
+    align-items: center;
+}
+
+.nav-link {
+    width: 100%;
+}
+
+.sidebg {
+    padding: 0px
+}
+
+.img_pro {
+    width: 50px;
+    height: 50px;
+}
+
+.namepro {
+    margin-left: 15px;
+    color: aliceblue;
+    margin-top: 10px;
+}

@@ -1,0 +1,260 @@
+.item {
+    grid-row-start: 1;
+}
+
+.info_left {
+    display: flex;
+    width: 75%;
+    padding: 0.5rem;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.info_right {
+    width: 20%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.name {
+    width: 70%;
+    height: 80%;
+}
+
+.img_profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.mainlogo {}
+
+.gri {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    height: 10%;
+    padding: 0;
+    bottom: 0;
+    border-top: solid;
+    border-width: 1px;
+    border-color: rgb(133, 131, 129);
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    width: 19rem;
+}
+
+.btn.btn-danger.btn-sm {
+    font-size: 10px;
+}
+
+.bi.bi-cart-plus {
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+}
+
+.block_price {
+    margin-top: -45px;
+    padding-top: 0px;
+    display: flex;
+    margin-left: 40%;
+    width: 60%;
+}
+
+.price {
+    text-align: right;
+    margin-right: 5%;
+    margin-bottom: 0px;
+    font-size: 20px;
+    width: 100%;
+    font-style: oblique;
+}
+
+body {}
+
+.card {
+    height: 450px;
+    border-radius: 5%;
+    position: relative;
+}
+
+.card-img-top {
+    border-top: 5%;
+    object-fit: cover;
+}
+
+.blockimg {
+    width: 100%;
+    height: 40%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.body_content {
+    text-align: center;
+    width: 100%;
+    height: 40%;
+    padding: 2%;
+    overflow: hidden;
+}
+
+.description {
+    width: 100%;
+    height: 100px;
+    padding: 2px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    color: rgb(73, 71, 71);
+}
+
+.head {
+    text-align: center;
+    width: 80px;
+    z-index: 999;
+    background-color: tomato;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+    border-radius: 5px;
+}
+
+.brand {
+    font-weight: 1000;
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.date {
+    padding: 0;
+    margin-top: 0px;
+    font-size: 10px;
+    margin-bottom: 0;
+    color: rgb(80, 78, 78);
+}
+
+.size {
+    padding-top: 0px;
+    margin-top: -2px;
+    margin-bottom: 0px;
+}
+
+.feather-10 {
+    margin-top: -2px;
+    height: 15px;
+    color: rgb(80, 78, 78);
+}
+
+.detaillink {
+    margin-top: 0px;
+    color: white;
+    font-size: small;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.detail {
+    margin-bottom: 5px;
+    ;
+}
+
+.l_s_name {
+    color: black;
+}
+
+.titlehead {
+    margin-bottom: 10px;
+    width: 60%;
+    display: none;
+}
+
+.container {}
+
+.container.ainlogo {
+    margin-left: 0px;
+}
+
+.mainlogo {}
+
+.select {
+    width: 30%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+}
+
+.main {
+    margin-left: 0px;
+    padding: 0px;
+    transition: all 0.3s ease;
+}
+
+.main:hover {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer {
+    background-color: rgb(53, 50, 50);
+}
+
+.p-h {
+    color: rgb(241, 238, 234);
+    margin: 0px;
+    font-weight: 1000;
+    font-size: 18px;
+}
+
+.fl {
+    margin-top: 20px;
+}
+
+.contactp {
+    width: 80%;
+    color: white;
+    padding-left: 5px;
+}
+
+.social {
+    font-size: 20px;
+    margin-left: 3px;
+    text-decoration: none;
+}
+
+.social:hover {
+    text-decoration: none;
+}
+
+.footerlist {
+    color: white;
+}
+
+main {
+    padding-bottom: 0px;
+}
+
+footer {
+    margin-bottom: 0px;
+}

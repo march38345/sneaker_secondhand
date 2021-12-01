@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "bootstrap-icons";
+    src: url(/fonts/vendor/bootstrap-icons/bootstrap-icons.woff2?dfd0ea122577eb61795f175e0347fa2c) format("woff2"),
+  url(/fonts/vendor/bootstrap-icons/bootstrap-icons.woff?94eeade15e6b7fbed35b18ff32f0c112) format("woff");
+  }
+  @font-face {
+    font-family: "bootstrap-icons";
+    src: url(../fonts/vendor/bootstrap-icons/bootstrap-icons.woff2?dfd0ea122577eb61795f175e0347fa2c) format("woff2"),
+  url(../fonts/vendor/bootstrap-icons/bootstrap-icons.woff?94eeade15e6b7fbed35b18ff32f0c112) format("woff");
+  }
