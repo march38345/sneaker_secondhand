@@ -107,7 +107,7 @@
                                     <select name="province" id="province" class="form-select">
                                         <option value="">กรุณาเลือกจังหวัด</option>
                                         @foreach ($province as $item)
-                                            <option value="{{ $item->id }}">{{ $item->name_in_thai }}</option>
+                                        
                                         @endforeach
                                     </select>
                                 </div>
@@ -150,41 +150,7 @@
         </div>
 
     </body>
-    <script type="text/javascript">
-        updateList = function() {
-            var input = document.getElementById('file');
-            var output = document.getElementById('fileList');
-
-            output.innerHTML = '<ul>';
-            for (var i = 0; i < input.files.length; ++i) {
-                output.innerHTML += '<li>' + input.files.item(i).name + '</li>';
-            }
-            output.innerHTML += '</ul>';
-        };
-
-
-        $('#province').change(function() {
-
-            if ($(this).val() != '') {
-                var select = $(this).val();
-                var _token = $('input[name="_token"]').val();
-
-                $.ajax({
-                    url: "{{ route('dropdowndistrict') }}",
-                    method: "POST",
-                    data: {
-                        select: select,
-                        _token: _token
-                    },
-                    success: function(result) {
-                        $('#district').html(result);
-                    }
-                })
-
-            }
-
-        });
-    </script>
+  
 
     </html>
 
