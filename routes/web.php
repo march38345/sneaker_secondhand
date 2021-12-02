@@ -32,7 +32,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class,'home'] )->middleware('check_status')->name('home');
 Route::get('/admin/home',[HomeController::class,'adminHome'])->name('admin.home')->middleware('is_admin');
-Route::get('/set_for_sale',[SaleController::class,'set_for_sale'])->name('set_for_sale')->middleware('check_status');
+Route::get('/set_for_sale',[HomeController::class,'home'])->name('set_for_sale')->middleware('check_status');
 Route::post('/set_for_sale/confirm',[SaleController::class,'confirmsale'])->name('confirmsale')->middleware('check_status');
 Route::get('/detail_product/{id_product}',function ($id_product)
 {   
