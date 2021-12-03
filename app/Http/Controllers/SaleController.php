@@ -68,7 +68,11 @@ class SaleController extends Controller
 
    
     
-     
+    
+
+
+ try{
+      
     $statement = new Statement;
     $statement->user_id = Auth::user()->id;
     $statement->name = Auth::user()->name;
@@ -81,11 +85,11 @@ class SaleController extends Controller
     $statement->status = 0;
    $statement->province = $name_province;
     $statement->district = $name_district;
-
-
- 
- 
-    $state =  $statement->save();
+   $statement->save();
+    
+ }catch(Exception $e){
+    echo $e->getMessage();
+ }
     
  
 
