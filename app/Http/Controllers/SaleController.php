@@ -74,7 +74,7 @@ class SaleController extends Controller
     $statement->name = Auth::user()->name;
     $statement->brand_name = $request->brand_name;
     $statement->path_img =$path;
-    $statement->description = $request->description;
+    $statement->discription = $request->description;
     $statement->size = $request->size;
     $statement->price = $request->price;
     $statement->phone = $request->phone;
@@ -83,7 +83,7 @@ class SaleController extends Controller
     $statement->district = $name_district;
 
 
- 
+ //
  
     $state =  $statement->save();
     if(!$state){

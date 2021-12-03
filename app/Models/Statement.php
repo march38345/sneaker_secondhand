@@ -14,7 +14,7 @@ protected $fillable = [
         'name',
         'brand_name', 
         'path_img',
-        'description',
+        'discription',
         'size',
         'price',
         'phone',
