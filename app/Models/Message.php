@@ -12,7 +12,7 @@ class Message extends Model
   'id',      
 'chat_msg',
 'user_send',
-'user_receive',
+'user_receive'
 
 
     ];
