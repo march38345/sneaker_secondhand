@@ -19,9 +19,14 @@ class CreateStatementsTable extends Migration
             $table->string('name');
             $table->string('brand_name');
             $table->string('path_img');
-            $table->string('discription');
+            $table->longText('discription');
+
+            $table->string('size');
             $table->string('price');
             $table->string('phone');
+            $table->string('status');
+            $table->string('province');
+            $table->string('district');
             
             $table->timestamps();
         });
