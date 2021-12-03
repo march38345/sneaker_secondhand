@@ -22,8 +22,14 @@ class MessageController extends Controller
         $ob =  $request->get('data');
         $user = User::where('name', $ob['sendto'])->get();
 
+        $chat_msg = $ob['message'];
+        $user_send = $ob['user_id'];
+        $user_receive =  $user[0]->id;
+        $message = new Message();
+        $message->chat_msg = $chat_msg;
+        $message->user_send = $user_send;
+        $message->user_receive = $user_receive;
       
-
     
     }
     public function getlist(Request $request)
