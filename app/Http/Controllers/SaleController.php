@@ -66,7 +66,7 @@ class SaleController extends Controller
         $name_district = $item->name_in_thai;
    }
 
-   dd($district);
+   
     
      
     $statement = new Statement;
@@ -83,10 +83,10 @@ class SaleController extends Controller
     $statement->district = $name_district;
 
 
-   
+ 
  
     $state =  $statement->save();
-  
+    dd($state);
 
  
     
