@@ -13,8 +13,8 @@ class SaleController extends Controller
 {
  public function set_for_sale()
  {   
-     $province = Provinces::get();
-     return view('set_for_sale')->with(compact('province'));
+    // $province = Provinces::get();
+     return view('set_for_sale');//->with(compact('province'));
  }
  public function confirmsale(Request $request)
  {
