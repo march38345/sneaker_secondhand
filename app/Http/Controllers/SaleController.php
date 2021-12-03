@@ -8,7 +8,7 @@ use App\Models\Statement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PhpOption\Option;
-
+use DB;
 class SaleController extends Controller
 {
  public function set_for_sale()
@@ -68,11 +68,7 @@ class SaleController extends Controller
 
    
     
-    
-
-
- try{
-      
+     
     $statement = new Statement;
     $statement->user_id = Auth::user()->id;
     $statement->name = Auth::user()->name;
@@ -85,12 +81,24 @@ class SaleController extends Controller
     $statement->status = 0;
    $statement->province = $name_province;
     $statement->district = $name_district;
-   $statement->save();
+
+$data = array('user_id'=>Auth::user()->id,'name'=>Auth::user()->name,
+   'brand_name'=>$request->brand_name,
+   'path_img'=>$path,
+   'description'=>$request->description,
+   'size'=>$request->brand_name,
+   'price'=>$request->price,
+   'phone'=>$request->brand_name,
+   'brand_name'=>$request->phone,
+   'status'=>'0',
+   'province'=>$name_province,
+   'district'=>$name_district
+
+);
     
- }catch(Exception $e){
-    echo $e->getMessage();
- }
-    
+DB::table('statements')->insert($data);
+ 
+
  
 
  
