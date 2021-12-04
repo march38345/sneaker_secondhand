@@ -24,12 +24,12 @@ class MessageController extends Controller
 
         $chat_msg = $ob['message'];
         $user_send = $ob['user_id'];
-        $user_receive =  $user[0]->id;
+        $user_receive =  (string)$user[0]->id;
         $message = new Message();
         $message->chat_msg = $chat_msg;
         $message->user_send = $user_send;
         $message->user_receive = $user_receive;
-        #$state = $message->save();
+        $state = $message->save();
         echo ($message);
        
     }
