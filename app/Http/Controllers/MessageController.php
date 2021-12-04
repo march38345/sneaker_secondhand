@@ -21,18 +21,17 @@ class MessageController extends Controller
     {
         $ob =  $request->get('data');
         $user = User::where('name', $ob['sendto'])->get();
-        $date = new DateTime();
-        $tp = $date->getTimestamp();
+        
         $chat_msg = $ob['message'];
         $user_send = $ob['user_id'];
         $user_receive =  $user[0]->id;
         $message = new Message();
-        $message->chat_id = 3;
+     
         $message->chat_msg = $chat_msg;
         $message->user_send = $user_send;
         $message->user_receive = $user_receive;
-        $message->created_at = $tp;
-        $message->updated_at = $tp;
+      
+
         $state = $message->save();
         
     }
