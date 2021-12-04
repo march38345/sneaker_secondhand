@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use \Datetime;
+
 use App\Models\Listroomchat;
 use App\Models\Message;
 use Illuminate\Http\Request;
@@ -21,19 +21,55 @@ class MessageController extends Controller
     {
         $ob =  $request->get('data');
         $user = User::where('name', $ob['sendto'])->get();
-        
+
         $chat_msg = $ob['message'];
         $user_send = $ob['user_id'];
         $user_receive =  $user[0]->id;
         $message = new Message();
-     
         $message->chat_msg = $chat_msg;
         $message->user_send = $user_send;
         $message->user_receive = $user_receive;
-        
-      
-        $state = $message->save();
-        
+        //$state = $message->save();
+
+        $listmessage = Listroomchat::where('user_id', $ob['user_id'])->get();
+        echo sizeof((array)$listmessage);
+        if (sizeof($listmessage) == 0) {
+            echo sizeof((array)$listmessage);
+            $createlist = new Listroomchat();
+            $createlist->user_id = $user_send;
+            $createlist->listchat = $user_receive;
+            $create = $createlist->save();
+        } else {
+
+            $str = $listmessage[0]->listchat;
+            $ar = explode(",", $str);
+
+            if (!in_array($user_receive, $ar)) {
+                $str = $str . ',' . $user_receive;
+                $createlist = Listroomchat::where('user_id', $ob['user_id'])
+                    ->update([
+                        'listchat' => $str
+                    ]);
+            }
+        }
+        $listreceive = Listroomchat::where('user_id', $user_receive)->get();
+        if (sizeof($listreceive) == 0) {
+            $createlist = new Listroomchat();
+            $createlist->user_id = $user_receive;
+            $createlist->listchat = $user_send;
+            $create = $createlist->save();
+        } else {
+            $s = 'sdas,dasd,dasd';
+            $str = $listreceive[0]->listchat;
+            $ar = explode(",", $str);
+            if (!in_array($user_send, $ar)) {
+                $str = $str . ',' . $user_send;
+                $createlist = Listroomchat::where('user_id', $user_receive)
+                    ->update([
+                        'listchat' => $str
+                    ]);
+            }
+        }
     }
     public function getlist(Request $request)
     {
