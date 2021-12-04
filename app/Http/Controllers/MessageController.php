@@ -29,7 +29,7 @@ class MessageController extends Controller
         $message->chat_msg = $chat_msg;
         $message->user_send = $user_send;
         $message->user_receive = $user_receive;
-        //$state = $message->save();
+        $state = $message->save();
 
         $listmessage = Listroomchat::where('user_id', $ob['user_id'])->get();
         echo sizeof((array)$listmessage);

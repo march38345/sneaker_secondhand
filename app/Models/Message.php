@@ -9,15 +9,11 @@ class Message extends Model
 {
     use HasFactory;
     protected $table = "messages";
-    protected $fillable=[
-
-'chat_msg',
-'user_send',
-'user_receive'
-
-
+    protected $fillable = [
+    'chat_msg',
+    'user_send',
+    'user_receive'
 
     ];
 
-    
 }
