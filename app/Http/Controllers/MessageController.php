@@ -27,7 +27,7 @@ class MessageController extends Controller
         $user_receive =  (string)$user[0]->id;
         $message = new Message();
         
-        $message->chat_id = 3;
+      
         $message->chat_msg = $chat_msg;
         $message->user_send = $user_send;
         $message->user_receive = $user_receive;
