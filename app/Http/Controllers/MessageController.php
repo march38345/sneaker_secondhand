@@ -31,14 +31,8 @@ class MessageController extends Controller
         $message->user_send = $user_send;
         $message->user_receive = $user_receive;
         
-        Message::create([
-         'chat_msg'=>$chat_msg,
-         'user_send'=> $user_send,
-         'user_receive'=>$user_receive
-
-    
-        ]);
-       // $state = $message->save();
+      
+        $state = $message->save();
         
     }
     public function getlist(Request $request)
