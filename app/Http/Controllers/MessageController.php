@@ -29,7 +29,7 @@ class MessageController extends Controller
         $message->chat_msg = $chat_msg;
         $message->user_send = $user_send;
         $message->user_receive = $user_receive;
-     
+     dd($message);
         
     }
     public function getlist(Request $request)
