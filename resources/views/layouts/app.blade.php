@@ -27,12 +27,7 @@
 
         }
 
-        .container {
-            padding: 0px
-            margin-left: 100px;
-            width: 100%;
-        }
-
+        
         .navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm {
             padding-left: 0px;
 
