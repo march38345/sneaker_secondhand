@@ -210,10 +210,10 @@
             setInterval(function() {
 
 
-                listchat();
-                clicklist();
-                newmessage();
-                console.log(sizemessage);
+              //  listchat();
+              //  clicklist();
+              //  newmessage();
+               // console.log(sizemessage);
 
             }, 1000);
 
