@@ -111,7 +111,7 @@
         <div class="col-lg-8 col-sm-8">
             <h1 class="text-light bg-dark col-lg-4 mx-auto">TABLE ORDERS</h1>
             <br>
-            <div class="col-8 tb" >
+            <div class="container col-10 tb" >
             <table class="table table-hover table-dark">
                 <thead>
                     <tr>
