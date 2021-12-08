@@ -199,6 +199,7 @@
             }
 
         });
+        $('#title').val('sale')
     </script>
 
     </html>
