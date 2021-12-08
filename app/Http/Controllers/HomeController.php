@@ -156,12 +156,12 @@ class HomeController extends Controller
         $brand_name = $re['brand_name'];
         $all = 'all';
         if($brand_name == $all){
-            $listproduct = User::join('statements', 'statements.id', '=', 'users.id')
+            $listproduct = User::join('statements', 'statements.user_id', '=', 'users.id')
             ->get();
 
         return response()->json($listproduct);
         }
-        $listproduct = User::join('statements', 'statements.id', '=', 'users.id')
+        $listproduct = User::join('statements', 'statements.user_id', '=', 'users.id')
             ->where('brand_name', $brand_name)->get();
 
         return response()->json($listproduct);
