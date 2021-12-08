@@ -210,7 +210,7 @@
             setInterval(function() {
 
 
-               listchat();
+              listchat();
                 clicklist();
                newmessage();
                 console.log(sizemessage);
@@ -239,10 +239,10 @@
                         if (countlist == 0) { //check list ครั้งแรก
                           
                             for (let i in listchat) {
-                                li1 = '<li class="itemlistchat" value="' + listchat[i][0]['name'] + '" id="' +
-                                    listchat[i][0]['id'] + '">';
+                                li1 = '<li class="itemlistchat" value="' + listchat[i]['name'] + '" id="' +
+                                    listchat[i]['id'] + '">';
                                 li2 = '</li>'
-                                name = listchat[i][0]['name'];
+                                name = listchat[i]['name'];
                                 str = li1.concat(name).concat(li2);
                                 countlist++;
 
@@ -253,10 +253,10 @@
 
                         if (countlist < len_list) {
                             while (countlist < len_list) {
-                                li1 = '<li class="itemlistchat" value="' + listchat[countlist][0]['name'] +
-                                    '" id="' + listchat[countlist][0]['id'] + '">';
+                                li1 = '<li class="itemlistchat" value="' + listchat[countlist]['name'] +
+                                    '" id="' + listchat[countlist]['id'] + '">';
                                 li2 = '</li>'
-                                name = listchat[countlist][0]['name'];
+                                name = listchat[countlist]['name'];
                                 str = li1.concat(name).concat(li2);
                                 countlist++;
                                 console.log()

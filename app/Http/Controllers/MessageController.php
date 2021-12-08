@@ -21,9 +21,13 @@ class MessageController extends Controller
     {
         $ob =  $request->get('data');
         $user = User::where('name', $ob['sendto'])->get();
+if(sizeof($user)!=0){
+
+
 
         $chat_msg = $ob['message'];
         $user_send = $ob['user_id'];
+        
         $user_receive =  $user[0]->id;
         $message = new Message();
         $message->chat_msg = $chat_msg;
@@ -71,6 +75,7 @@ class MessageController extends Controller
             }
         }
     }
+    }
     public function getlist(Request $request)
     {
         $re = $request->get('data');
@@ -82,12 +87,13 @@ class MessageController extends Controller
             $listnew->listchat = '7';
             $crea = $listnew->save();
             $list = Listroomchat::where('user_id', $user_id)->get();
-            echo  json_encode($list);
+            $list_user = array($list);
+            echo  json_encode($list_user);
         }else{
             $ar = explode(',', $listchat[0]->listchat);
             $list_user = array();
             foreach ($ar as $item) {
-                $user = User::where('id', $item)->get();
+                $user = User::where('id', $item)->first();
                 array_push($list_user, $user);
             }
             echo  json_encode($list_user);
