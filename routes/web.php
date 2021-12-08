@@ -24,16 +24,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class,'home'])->middleware('check_status')->name('homepage');
-Route::get('/market', [HomeController::class,'getmarket'])->middleware('check_status')->name('market');
+Route::get('/', [HomeController::class,'home'])->name('homepage');
+Route::get('/market', [HomeController::class,'getmarket'])->name('market');
 
 Auth::routes();
 
+Route::get('/home',[HomeController::class,'home'])->name('home');
 
-Route::get('/home', [HomeController::class,'home'] )->middleware('check_status')->name('home');
 Route::get('/admin/home',[HomeController::class,'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('/set_for_sale',[SaleController::class,'set_for_sale'])->name('set_for_sale')->middleware('check_status');
-Route::post('/set_for_sale/confirm',[SaleController::class,'confirmsale'])->name('confirmsale')->middleware('check_status');
+Route::post('/set_for_sale/confirm',[SaleController::class,'confirmsale'])->name('confirmsale');
 Route::get('/detail_product/{id_product}',function ($id_product)
 {   
     $product = Statement::where('id',$id_product)->get();
@@ -114,7 +114,7 @@ Route::get('/admin/profile',[AdminController::class,'profile'])->name('profilead
 Route::get('/admin/getcustomer',[AdminController::class,'getcustomer'])->name('getcustomer');
 Route::get('/admin/getgrahp',[AdminController::class,'getgrahp'])->name('getgrahp');
 Route::get('/admin/getorder',[AdminController::class,'getorder'])->name('getorder');
-Route::get('/chat',[MessageController::class,'viewchat'])->name('viewchat');
+Route::get('/chat',[MessageController::class,'viewchat'])->name('viewchat')->middleware('check_status');
 Route::post('/chat/sendmessage',[MessageController::class,'sendto'])->name('sendto');
 Route::post('/message/getlist',[MessageController::class,'getlist'])->name('getlist');
 Route::post('/message/getmessage',[MessageController::class,'getmessage'])->name('getmessage');
