@@ -169,6 +169,7 @@
             .descriptionblock {
                 overflow-y:scroll;
                 height: 200px;
+                border:solid rgba(66, 63, 63, 0.3);
             }
 
             .dotblock {
@@ -241,11 +242,13 @@
                     @foreach ($product as $item)
                         <div class="branblock">
                             <h5 class="brand">ยี่ห่อ: {{ $item->brand_name }} </h5>
+                            <h5>id_prouct:{{ $item->id }}</h5>
                         </div>
                         <div>
                             <p>size:{{ $item->size }}</p>
+                            
                         </div>
-                        <div class="descriptionblock" width="80%"style="border: solid">
+                        <div class="descriptionblock" width="80%">
                             <h5>คำอธิบายสินค้า</h5>
                             <p class="description" width="100%"> {{ $item->discription }}</p>
 

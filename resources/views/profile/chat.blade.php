@@ -129,8 +129,8 @@
                     </ul>
                 </div>
                 <div class="card col-lg-8 col-sm-8 " style="height: 600px">
-                    <label for="sendto">Send To:</label>
-                    <input type="text" name="sendto" id="sendto" value="" class="form-control">
+                    <label for="sendto">Send To:userที่ต้องการติดต่อ</label>
+                    <input type="text" name="sendto" id="sendto" value="" class="form-control" >
                     <div class="card col-lg-12 col-sm-12 bg-white mainmessage" style="height: 65%;">
                         <ul class="message" width="100%" >
 

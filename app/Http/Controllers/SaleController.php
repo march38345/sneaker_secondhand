@@ -22,13 +22,19 @@ class SaleController extends Controller
     $request->validate(
         ['description'=>'required',
          'price'      =>'required|max:255',
+         'size'      =>'required|max:255',
+         'phone'      =>'required|max:255',
+        
          'img'        =>'required'
         ],
         [
-         'description.required' =>"กรุณากรอกข้อมูล",
+         'description.required' =>"กรุณากรอกข้อมูลคำอธิบายสินค้า",
          'price.required' =>"กรุณากรอกราคาของสินค้า",
+         'size.required' =>"กรุณาระบุไซต์",
+         'phone.required' =>"กรุณาระบุเบอร์โทรศัพท์",
          
          'price.max' =>"ห้ามป้อนข้อมูลเกิน255ตัวอักษร",
+         'price.max' =>"ห้ามป้อนข้อมูลเกิน255อักษร",
         'img.required'=>"กรุณาอัปโหลดรูปภาพของสินค้าที่ต้องการขาย",
         'img.mimes' => "กรุณาเลือกไฟล์ .jpeg ,.jpg ,.png"
 

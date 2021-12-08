@@ -44,6 +44,21 @@
     </head>
 
     <body >
+        @error('description')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+        @error('price')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+        @error('phone')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+        @error('size')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+        @error('img')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
 
         @if (session('success'))
 
