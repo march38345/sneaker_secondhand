@@ -100,7 +100,7 @@
                                     <i data-feather="calendar" class="feather-10"></i> {{ $item->created_at }}
                                 </p>
 
-                                <p class="description" style="text-align: center">{{ $item->description }}
+                                <p class="description" style="text-align: center">{{ $item->discription }}
 
                                 </p>
 

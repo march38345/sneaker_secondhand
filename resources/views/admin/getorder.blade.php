@@ -22,7 +22,7 @@
             text-align: center;
         }
         .tb{
-            margin-left: 10%;
+           
         }
         th{
             text-align: center;
@@ -56,8 +56,8 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.home') }}" class="nav-link" >
-                                <i data-feather="user"></i>
-                                <span class="">{{ Auth::user()->name }}</span>
+                                <i class="bi bi-speedometer2" style="font-size: 23px;"></i>
+                                <span class="">Dashboard</span>
                             </a>
 
                         </li>
@@ -108,10 +108,10 @@
                 </div>
             </nav>
         </div>
-        <div class="col-lg-10 col-sm-8">
+        <div class="col-lg-8 col-sm-8">
             <h1 class="text-light bg-dark col-lg-4 mx-auto">TABLE ORDERS</h1>
             <br>
-            <div class="col-10 tb" >
+            <div class="col-8 tb" >
             <table class="table table-hover table-dark">
                 <thead>
                     <tr>

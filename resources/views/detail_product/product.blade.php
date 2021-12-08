@@ -166,7 +166,10 @@
                 font-size: 20px;
             }
 
-            .descriptionblock {}
+            .descriptionblock {
+                overflow-y:scroll;
+                height: 200px;
+            }
 
             .dotblock {
                 display: block;
@@ -242,9 +245,9 @@
                         <div>
                             <p>size:{{ $item->size }}</p>
                         </div>
-                        <div class="descriptionblock">
+                        <div class="descriptionblock" width="80%"style="border: solid">
                             <h5>คำอธิบายสินค้า</h5>
-                            <p class="description"> {{ $item->description }}</p>
+                            <p class="description" width="100%"> {{ $item->discription }}</p>
 
                         </div>
                         <div class="emailblock">

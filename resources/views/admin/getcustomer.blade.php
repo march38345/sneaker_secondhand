@@ -56,8 +56,8 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.home') }}" class="nav-link" >
-                                <i data-feather="user"></i>
-                                <span class="">{{ Auth::user()->name }}</span>
+                                <i class="bi bi-speedometer2" style="font-size: 23px;"></i>
+                                <span class="">Dashboard</span>
                             </a>
 
                         </li>

@@ -30,6 +30,7 @@ $dataPoints = [['label' => 'NIke', 'y' => ($product['Nike'] / $size) * 100], ['l
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -123,17 +124,17 @@ $dataPoints = [['label' => 'NIke', 'y' => ($product['Nike'] / $size) * 100], ['l
                             </a>
 
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" >
                             <a href="/" class="nav-link">
                                 <i data-feather="home"></i>
-                                <span class="">home</span>
+                                <span class="">Home</span>
                             </a>
 
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item"width="30px">
                             <a href="{{ route('admin.home') }}" class="nav-link" style="background: white">
-                                <i data-feather="user"></i>
-                                <span class="">{{ Auth::user()->name }}</span>
+                                <i class="bi bi-speedometer2" style="font-size: 23px;"></i>
+                                <span class="">Dashboard</span>
                             </a>
 
                         </li>
@@ -148,7 +149,7 @@ $dataPoints = [['label' => 'NIke', 'y' => ($product['Nike'] / $size) * 100], ['l
                         <li class="nav-item">
                             <a href="{{ route('getorder') }}" class="nav-link">
                                 <i data-feather="layout"></i>
-                                <span class="">order</span>
+                                <span class="">Order</span>
                             </a>
 
                         </li>
@@ -220,7 +221,7 @@ $dataPoints = [['label' => 'NIke', 'y' => ($product['Nike'] / $size) * 100], ['l
                 </div>
 
             </div>
-            <div class=""></div>
+            
 
 
 
@@ -362,7 +363,7 @@ $dataPoints = [['label' => 'NIke', 'y' => ($product['Nike'] / $size) * 100], ['l
 
             }
         })
-
+     
 
     }
 </script>
