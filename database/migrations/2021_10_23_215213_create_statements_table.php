@@ -15,7 +15,7 @@ class CreateStatementsTable extends Migration
     {
         Schema::create('statements', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
+            $table->int('user_id');
             $table->string('name');
             $table->string('brand_name');
             $table->string('path_img');
