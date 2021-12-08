@@ -211,9 +211,9 @@
 
 
                listchat();
-              //  clicklist();
-              //  newmessage();
-               // console.log(sizemessage);
+                clicklist();
+               newmessage();
+                console.log(sizemessage);
 
             }, 1000);
 
@@ -235,9 +235,9 @@
 
                         var listchat = JSON.parse(result)
                         var len_list = Object.keys(listchat).length;
-
+                      
                         if (countlist == 0) { //check list ครั้งแรก
-
+                          
                             for (let i in listchat) {
                                 li1 = '<li class="itemlistchat" value="' + listchat[i][0]['name'] + '" id="' +
                                     listchat[i][0]['id'] + '">';

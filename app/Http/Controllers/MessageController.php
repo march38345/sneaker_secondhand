@@ -76,34 +76,45 @@ class MessageController extends Controller
         $re = $request->get('data');
         $user_id = $re['user_id'];
         $listchat = Listroomchat::where('user_id', $user_id)->get();
-        $ar = explode(',', $listchat[0]->listchat);
-        $list_user = array();
-        foreach ($ar as $item) {
-            $user = User::where('id', $item)->get();
-            array_push($list_user, $user);
+        if (sizeof($listchat) == 0) {
+            $listnew = new Listroomchat;
+            $listnew->user_id = $user_id;
+            $listnew->listchat = '7';
+            $crea = $listnew->save();
+            $list = Listroomchat::where('user_id', $user_id)->get();
+            echo  json_encode($list);
+        }else{
+            $ar = explode(',', $listchat[0]->listchat);
+            $list_user = array();
+            foreach ($ar as $item) {
+                $user = User::where('id', $item)->get();
+                array_push($list_user, $user);
+            }
+            echo  json_encode($list_user);
         }
+    
+        
 
 
-
-        echo  json_encode($list_user);
+        
     }
     public function getmessage(Request $request)
     {
         $re = $request->get('data');
         $user_send = $re['user_send'];
         $user_receive = $re['user_receive'];
-       
 
-        $messageall = Message::where(function ($query) use ($user_send,$user_receive) {
+
+        $messageall = Message::where(function ($query) use ($user_send, $user_receive) {
             $query->where('user_send', $user_send)
-                  ->where('user_receive', $user_receive);
-        })->orWhere(function ($query)use ($user_send,$user_receive) {
+                ->where('user_receive', $user_receive);
+        })->orWhere(function ($query) use ($user_send, $user_receive) {
             $query->where('user_send', $user_receive)
-            ->where('user_receive', $user_send);
-        })->get();//->latest()เอาอันสุดท้านก่อน
-  
+                ->where('user_receive', $user_send);
+        })->get(); //->latest()เอาอันสุดท้านก่อน
 
-       
+
+
         return  response()->json($messageall);
     }
 }
