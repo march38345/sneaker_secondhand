@@ -144,7 +144,7 @@
                     <div class="card col-lg-12 col-sm-12 bg-white sendmessage">
 
                         <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                        <div class="btn btn-primary col-sm-1 col-lg-1" style="margin-left:91%;padding:0px" title="ส่ง"
+                        <div class="btn btn-primary col-sm-1 col-md-1 col-xl-1 col-lg-1" style="margin-left:91%;padding:0px;" title="ส่ง"
                             id="sendmessage" style="">
                             <i data-feather="send" style="height: 60%;padding:0px;margin:0px"></i>
                         </div>

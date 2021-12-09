@@ -82,7 +82,7 @@
 
         </div>
 
-        <div class="col-12 bodysection">
+        <div class="col-12 bodysection" style="padding-bottom: 50px">
             <h3>วิธีการใช้งานเว็บไซต์</h3>
             <div class="container">
                 <div class="row">
@@ -128,11 +128,11 @@
                        หน้า sale มีไว้สำหรับผู้ที่ต้องการจะขายโพสขายสินค้า โดยผู้ขายต้องทำการกรอกข้อมูลของสินค้าให้ครบถ้วน
                     </p>
                 </div>
-                <div class="container col-lg-10 col-sm-10 blockmainfunction" style="width: 70%">
+                <div class="container col-lg-10 col-sm-10 blockmainfunction" style="width: 70%;margin-bottom:50px;">
                    
                     <img src="/image/home/main_dis03.png" alt="" width="100%" height="600px">
                      <h5 style="color: black" class="headmain">chat</h5>
-                    <p class="container submainfun">
+                    <p class="container submainfun" style="">
                        หน้า chat มีไว้สำหรับติดต่อระหว่าผู้ซื้อและผู้ขาย วิธีใช้งานทำการกรอก username ที่เราจะทำการติดต่อ หรือเลือกผู้ที่จะต้องการติดจากแทบทางด้านซ้าย 
                     </p>
                 </div>

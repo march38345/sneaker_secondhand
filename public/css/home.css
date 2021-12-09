@@ -6,9 +6,9 @@
     background-size: 100% 100%;
     background-position: center;
     position: relative;
-    height: 600px;
     clear: both;
-    overflow: hidden;
+    overflow: auto;
+    padding-bottom: 70px;
 }
 
 .py-4 {
