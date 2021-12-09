@@ -93,7 +93,7 @@
                         <label for="description" >คำอธิบายสินค้า</label>
                         <br>
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="description"
-                            rows="3" >{{$item->description}}</textarea>
+                            rows="3" >{{$item->discription}}</textarea>
                         <br>
                         <label for="size">ไซต์</label>
                         <input type="text" name="size" class="form-control" value="{{$item->size}}">
