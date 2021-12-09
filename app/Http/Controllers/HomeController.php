@@ -101,7 +101,7 @@ class HomeController extends Controller
             }
             $upstate = Statement::where('id', $request->id)->update([
                 'brand_name' => $request->brand_name,
-                'description' => $request->description,
+                'discription' => $request->description,
                 'size' => $request->size,
                 'price' => $request->price,
                 'phone' => $request->phone,
