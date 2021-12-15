@@ -232,7 +232,7 @@
                             '</p> <p class="date"> <i data-feather="calendar" class="feather-10"></i> ' +
                             result[i]['created_at'] +
                             '</p><p class="description" style="text-align: center">' + result[i][
-                                'description'
+                                'discription'
                             ] + '</p></div><div class="detail"><a href="/detail_product/' + result[i][
                                 'id'
                             ] +
